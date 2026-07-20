@@ -7,6 +7,8 @@ services:
       - "8080:80"
     depends_on:
       - landing
+    networks:
+      - web
 
   landing:
     build:
@@ -14,3 +16,9 @@ services:
     container_name: morinscode-landing
     expose:
       - "80"
+    networks:
+      - web
+
+networks:
+  web:
+    name: morinscode-web
