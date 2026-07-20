@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Morin's Code</title>
+
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        color: #e7edf5;
+        background:
+          radial-gradient(circle at top, #172338 0%, transparent 45%), #080d15;
+      }
+
+      main {
+        width: min(90%, 680px);
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        margin: 0 auto 1.5rem;
+        width: min(100%, 640px);
+        height: auto;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.6rem, 8vw, 5rem);
+        letter-spacing: -0.06em;
+      }
+
+      p {
+        margin: 1rem 0 0;
+        color: #9facbd;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        line-height: 1.6;
+      }
+
+      .status {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.55rem 0.9rem;
+        border: 1px solid #33445c;
+        border-radius: 999px;
+        color: #b8c7da;
+        background: rgba(18, 28, 43, 0.75);
+        font-family: monospace;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <img class="logo" src="logo.png" alt="Morin's Code logo" />
+
+      <p>
+        Full-stack projects, experiments, and things built to learn how the
+        whole stack actually works.
+      </p>
+
+      <div class="status">Portfolio under construction</div>
+    </main>
+  </body>
+</html>

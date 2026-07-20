@@ -1,0 +1,16 @@
+services:
+  reverse-proxy:
+    build:
+      context: ./reverse-proxy
+    container_name: morinscode-reverse-proxy
+    ports:
+      - "8080:80"
+    depends_on:
+      - landing
+
+  landing:
+    build:
+      context: ./landing
+    container_name: morinscode-landing
+    expose:
+      - "80"
