@@ -5,6 +5,7 @@ services:
     container_name: morinscode-reverse-proxy
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       - landing
     volumes:
