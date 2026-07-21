@@ -1,0 +1,6 @@
+[Unit]
+Description=Renew morinscode.dev TLS certificates
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/renew-morinscode-certificates
