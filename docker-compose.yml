@@ -7,6 +7,9 @@ services:
       - "80:80"
     depends_on:
       - landing
+    volumes:
+      - ./certbot/www:/var/www/certbot:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
     networks:
       - web
 
@@ -18,6 +21,14 @@ services:
       - "80"
     networks:
       - web
+
+  certbot:
+    image: certbot/certbot:latest
+    container_name: morinscode-certbot
+
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
 
 networks:
   web:
